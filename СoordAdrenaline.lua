@@ -130,7 +130,7 @@ function window_f()
 		cordtp(1361.6196, -1277.6310, 13.3828, inputDelta.v, inputTime.v)
 	end
 	imgui.SameLine()
-	if imgui.Button(u8'Мэрия ЛС') then
+	if imgui.Button(u8'РњСЌСЂРёСЏ') then
 		cordtp(1482.3246, -1689.4470, 14.0772, inputDelta.v, inputTime.v)
 	end
 	imgui.SameLine()
@@ -141,16 +141,16 @@ function window_f()
 	if imgui.Button(u8'LSPD') then
 		cordtp(1569.4573, -1704.0730, 5.8906, inputDelta.v, inputTime.v)
 	end
-	if imgui.Button(u8'Телепорт на метку', imgui.ImVec2(-1, 0)) then
+	if imgui.Button(u8'РўРµР»РµРїРѕСЂС‚ РЅР° РјРµС‚РєСѓ', imgui.ImVec2(-1, 0)) then
 		if getTargetBlipCoordinates() then
 			local _, x, y, z = getTargetBlipCoordinates()
 			cordtp(x, y, z, inputDelta.v, inputTime.v)
 		end
 	end
-	imgui.SliderInt(u8'Расстояние', inputDelta, 5, 20)
-	imgui.SliderInt(u8'Задержка', inputTime, 1000, 5000)
-	imgui.SliderInt(u8'Высота', inputHeight, -30, 0)
-	if imgui.Button(u8'Сохранить изменения', imgui.ImVec2(-1, 0)) then
+	imgui.SliderInt(u8'Р Р°СЃСЃС‚РѕСЏРЅРёРµ', inputDelta, 5, 20)
+	imgui.SliderInt(u8'Р—Р°РґРµСЂР¶РєР°', inputTime, 1000, 5000)
+	imgui.SliderInt(u8'Р’С‹СЃРѕС‚Р°', inputHeight, -30, 0)
+	if imgui.Button(u8'РЎРѕС…СЂР°РЅРёС‚СЊ РёР·РјРµРЅРµРЅРёСЏ', imgui.ImVec2(-1, 0)) then
 		settings.main.time = inputTime.v
 		settings.main.delta = inputDelta.v
 		settings.main.height = inputHeight.v
